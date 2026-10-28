@@ -6,8 +6,37 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		494166103082387A003F7AAD /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4941660F3082387A003F7AAD /* UniformTypeIdentifiers.framework */; };
+		4941661C3082387A003F7AAD /* Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4941660D3082387A003F7AAD /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4941661A3082387A003F7AAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 494165E9308236D6003F7AAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4941660C3082387A003F7AAD;
+			remoteInfo = Extension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		494166213082387A003F7AAD /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				4941661C3082387A003F7AAD /* Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		494165F1308236D6003F7AAD /* Project19-javascript-injection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project19-javascript-injection.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4941660D3082387A003F7AAD /* Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4941660F3082387A003F7AAD /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -17,6 +46,13 @@
 				Info.plist,
 			);
 			target = 494165F0308236D6003F7AAD /* Project19-javascript-injection */;
+		};
+		494166203082387A003F7AAD /* Exceptions for "Extension" folder in "Extension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4941660C3082387A003F7AAD /* Extension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -29,12 +65,26 @@
 			path = "Project19-javascript-injection";
 			sourceTree = "<group>";
 		};
+		494166113082387A003F7AAD /* Extension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				494166203082387A003F7AAD /* Exceptions for "Extension" folder in "Extension" target */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		494165EE308236D6003F7AAD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+			);
+		};
+		4941660A3082387A003F7AAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				494166103082387A003F7AAD /* UniformTypeIdentifiers.framework in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -44,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				494165F3308236D6003F7AAD /* Project19-javascript-injection */,
+				494166113082387A003F7AAD /* Extension */,
+				4941660E3082387A003F7AAD /* Frameworks */,
 				494165F2308236D6003F7AAD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,8 +104,17 @@
 			isa = PBXGroup;
 			children = (
 				494165F1308236D6003F7AAD /* Project19-javascript-injection.app */,
+				4941660D3082387A003F7AAD /* Extension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4941660E3082387A003F7AAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4941660F3082387A003F7AAD /* UniformTypeIdentifiers.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -66,8 +127,12 @@
 				494165ED308236D6003F7AAD /* Sources */,
 				494165EE308236D6003F7AAD /* Frameworks */,
 				494165EF308236D6003F7AAD /* Resources */,
+				494166213082387A003F7AAD /* Embed Foundation Extensions */,
 			);
 			buildRules = (
+			);
+			dependencies = (
+				4941661B3082387A003F7AAD /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				494165F3308236D6003F7AAD /* Project19-javascript-injection */,
@@ -76,6 +141,24 @@
 			productName = "Project19-javascript-injection";
 			productReference = 494165F1308236D6003F7AAD /* Project19-javascript-injection.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4941660C3082387A003F7AAD /* Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4941661D3082387A003F7AAD /* Build configuration list for PBXNativeTarget "Extension" */;
+			buildPhases = (
+				494166093082387A003F7AAD /* Sources */,
+				4941660A3082387A003F7AAD /* Frameworks */,
+				4941660B3082387A003F7AAD /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				494166113082387A003F7AAD /* Extension */,
+			);
+			name = Extension;
+			productName = Extension;
+			productReference = 4941660D3082387A003F7AAD /* Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -88,6 +171,9 @@
 				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					494165F0308236D6003F7AAD = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					4941660C3082387A003F7AAD = {
 						CreatedOnToolsVersion = 27.0;
 					};
 				};
@@ -107,12 +193,18 @@
 			projectRoot = "";
 			targets = (
 				494165F0308236D6003F7AAD /* Project19-javascript-injection */,
+				4941660C3082387A003F7AAD /* Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		494165EF308236D6003F7AAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		4941660B3082387A003F7AAD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 			);
@@ -125,7 +217,20 @@
 			files = (
 			);
 		};
+		494166093082387A003F7AAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4941661B3082387A003F7AAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4941660C3082387A003F7AAD /* Extension */;
+			targetProxy = 4941661A3082387A003F7AAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		49416605308236D8003F7AAD /* Debug configuration for PBXNativeTarget "Project19-javascript-injection" */ = {
@@ -309,6 +414,60 @@
 			};
 			name = Release;
 		};
+		4941661E3082387A003F7AAD /* Debug configuration for PBXNativeTarget "Extension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Extension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.marecm.Project19-javascript-injection.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4941661F3082387A003F7AAD /* Release configuration for PBXNativeTarget "Extension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Extension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.marecm.Project19-javascript-injection.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -325,6 +484,14 @@
 			buildConfigurations = (
 				49416605308236D8003F7AAD /* Debug configuration for PBXNativeTarget "Project19-javascript-injection" */,
 				49416606308236D8003F7AAD /* Release configuration for PBXNativeTarget "Project19-javascript-injection" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		4941661D3082387A003F7AAD /* Build configuration list for PBXNativeTarget "Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4941661E3082387A003F7AAD /* Debug configuration for PBXNativeTarget "Extension" */,
+				4941661F3082387A003F7AAD /* Release configuration for PBXNativeTarget "Extension" */,
 			);
 			defaultConfigurationName = Release;
 		};
